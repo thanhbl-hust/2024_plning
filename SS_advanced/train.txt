@@ -1,4 +1,4 @@
-graph topic:
+graph topic (docs):
     _ travel in graph
         _ BFS
         _ DFS
@@ -7,4 +7,5 @@ graph topic:
     _ connectivity in graph
     _ dijkstra in graph
     _ smallest spanning tree in graph
-    _ 
+
+    _train_problems (codeforces, vnoi)
