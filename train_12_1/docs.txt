@@ -2,4 +2,13 @@ reset_plan:
 
 algo_train 
 ss_train
-face (last_19/2_night)
+
+
+face (last_19/2_night_tdc: ...)
+
+last_cheat (19/2_night)
+last_non (19_2 night)
+
+19/2_the_last
+
+
