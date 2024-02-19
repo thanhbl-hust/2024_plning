@@ -1,0 +1,5 @@
+reset_plan:
+
+algo_train 
+ss_train
+face (last_19/2_night)
