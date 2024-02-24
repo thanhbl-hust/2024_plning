@@ -6,7 +6,9 @@ ss_train
 
 face (last_19/2_night_tdc: ...)
 last_cheat (19/2_night)
-last_non (19_2 night)
+
+last_non (19_2 night ___ cheat)
+last_non (23_2 night ___ fb)
 
 19/2_the_last
 
