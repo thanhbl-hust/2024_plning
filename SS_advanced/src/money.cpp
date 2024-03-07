@@ -7,7 +7,6 @@ int getLength(string s){
     while(s[cnt] != '\0') cnt += 1;
     return cnt;
 }
-
 char stoi(int n){
     if(n == 0) return '0';
     if(n == 1) return '1';
@@ -21,7 +20,6 @@ char stoi(int n){
     if(n == 9) return '9';
     return '?';
 }
-
 int toi(char c){
     if(c == '0') return 0;
     if(c == '1') return 1;
@@ -35,7 +33,6 @@ int toi(char c){
     if(c == '9') return 9;
     return -1;
 }
-
 int stringtoINT(string num){
     int res = 0;
     int length = getLength(num);
@@ -44,7 +41,6 @@ int stringtoINT(string num){
     }
     return res;
 }
-
 string reverse(string ss){
     int l = 0;
     int r = getLength(ss) - 1;
@@ -58,36 +54,33 @@ string reverse(string ss){
     return ss;
 }
 
-string inttoSTRING(int num, int length){
+string inttoSTRING(int num){
     string ss = "";
     while(num != 0){
         ss += stoi(num % 10);
         num /= 10;
     }
-    while(getLength(ss) < length) ss = '0' + ss;
     ss = reverse(ss);
     return ss;
 }
-
 string swap(string ss, int l, int r){
     char c = ss[l];
     ss[l] = ss[r];
     ss[r] = c;
     return ss;
 }
-
 bool isExisted(int number, int n){
     for(int i = 0; i < count[n]; i++){
         if(board[n][i] == number) return true;
     }
     return false;
 }
-
 int solve(string num, int step, int length){
     board[0][0] = stringtoINT(num);
     for(int i = 0; i < step; i++){
         for(int j = 0; j < count[i]; j++){
-            string number = inttoSTRING(board[i][j], length);
+            string number = inttoSTRING(board[i][j]);
+            while(getLength(number) < length) number = '0' + number;
             for(int a = 0; a < length - 1; a++){
                 for(int b = a + 1; b < length; b++){
                     number = swap(number, a, b);
@@ -95,6 +88,7 @@ int solve(string num, int step, int length){
                         board[i + 1][count[i + 1]] = stringtoINT(number);
                         count[i + 1] += 1;
                     }
+                    number = swap(number, a, b);
                 }
             }
         }
@@ -107,19 +101,16 @@ int solve(string num, int step, int length){
     }
     return maxVal;
 }
-
-
 int main(){
     freopen("money.txt", "r", stdin);
     freopen("out.txt", "w", stdout);
-
     int test; cin >> test;
     for(int tc = 0; tc < test; tc++){
         for(int i = 0; i < 15; i++) count[i] = 0;
         count[0] = 1;
         string num; int step; cin >> num >> step;
         int length = getLength(num);
-        cout << "Case #" << tc + 1 << endl << solve(num, step, length) << endl;
+        cout << "#" << tc + 1 << " " <<  solve(num, step, length) << endl;
     }
 
     return 0;
