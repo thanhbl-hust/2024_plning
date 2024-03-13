@@ -38,7 +38,6 @@ int main(){
         int y_bonus = {-2, -1, 1, 2, 2, 1, -1, -2};
 
         while(1){
-
             for(int i = 0; i < 8; i++){
                 int r = queue[st + 1][0] + x_bonus[i];
                 int c = queue[st + 1][1] + y_bonus[i];
