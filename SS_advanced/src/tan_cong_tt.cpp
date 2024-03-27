@@ -22,6 +22,7 @@ void printCycle(int v){
     for(int j = parent[v]; j != v; j = parent[j]){
         cout << j << " ";
     }
+    cout << v << endl;
 }
 
 void DFS(int v, int step){
