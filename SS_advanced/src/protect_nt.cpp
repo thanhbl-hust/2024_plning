@@ -10,7 +10,7 @@ int v[25][25];
 int dis[25][25];
 char map[25][25];
 int nMap[25][25];
-long long ans = 1e6;
+int ans = 1e6;
 int countDirt = 1;
 int dr[4] = {1, -1, 0, 0};
 int dc[4] = {0, 0, 1, -1};
@@ -67,7 +67,6 @@ void setDis(){
 }
 
 void bfs(int r, int c, int step){
-    init();
     v[r][c] = 1;
     enQueue(r, c, step);
     while(!isEmpty()){
@@ -90,8 +89,10 @@ void bfs(int r, int c, int step){
                 }
             }
         }
+
         deQueue();
     }
+
 }
 
 void backtrack(int k, int step, int before){
@@ -155,12 +156,15 @@ int main(){
             }
             if(!pos) break;
         }
+
         if(pos == false) ans = -1;
+
         if(pos){
             setChoosen();
             choosen[0] = 1;
             backtrack(1, 0, 0);
         }
+        
         
 
         cout << ans << endl;
