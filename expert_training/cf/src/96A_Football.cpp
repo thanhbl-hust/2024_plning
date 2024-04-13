@@ -7,8 +7,6 @@ using namespace std;
 
 int main(){
 
-    freopen("inp.txt", "r", stdin);
-    
     string s; cin >> s;
 
     vector<int> dp(105, 1);
