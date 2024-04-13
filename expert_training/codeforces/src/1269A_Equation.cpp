@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-    freopen("inp.txt", "r", stdin);
+    int n; cin >> n; cout << 9 * n << " " << 8 * n << endl;
 
     return 0;
 }
