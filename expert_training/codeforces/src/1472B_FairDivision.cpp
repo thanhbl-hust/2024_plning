@@ -7,8 +7,6 @@ int num;
 
 int main(){
 
-    freopen("inp.txt", "r", stdin);
-
     int test; cin >> test;
     for(int tc = 0; tc < test; tc++){
         int n; cin >> n;
