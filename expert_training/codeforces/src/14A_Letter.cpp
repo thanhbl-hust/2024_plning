@@ -5,8 +5,6 @@ using namespace std;
 
 
 int main(){
-    freopen("inp.txt", "r", stdin);
-
     int n, m; cin >> n >> m;
 
     vector<string> mp;

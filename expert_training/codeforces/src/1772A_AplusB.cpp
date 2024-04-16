@@ -6,8 +6,6 @@ using namespace std;
 
 int main(){
 
-    freopen("inp.txt", "r", stdin);
-
     int test; cin >> test;
 
     for(int i = 0; i < test; i++){
