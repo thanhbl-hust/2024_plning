@@ -5,7 +5,7 @@
 * `Create a code block`
 
 ```bash
-cout << "Hello World!";
+print("Hello World")
 ```
 
 
